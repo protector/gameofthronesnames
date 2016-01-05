@@ -1,0 +1,25 @@
+{
+  "name": "got-names",
+  "version": "1.0.0",
+  "description": "Game of Thrones random Names",
+  "main": "src/index.js", //"require('game-of-thrones-names')",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protector/gameoftronesnames.git"
+  },
+  "keywords": [
+    "game",
+    "of",
+    "thrones",
+    "names"
+  ],
+  "author": "'Zsolt <'zsolt.paksi@gmail.com'> (http://protectorian.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/protector/gameoftronesnames/issues"
+  },
+  "homepage": "https://github.com/protector/gameoftronesnames#readme"
+}
