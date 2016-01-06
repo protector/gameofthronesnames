@@ -118,7 +118,7 @@ var createRandomName = function(names){
         }
          
     }
-    console.log(mixedNames);
+    //console.log(mixedNames);
     return mixedNames;
 }
 
