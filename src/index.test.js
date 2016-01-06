@@ -25,11 +25,11 @@ describe('game of thrones', function(){
        });
     });
     
-    describe('mix', function() {
+    /*describe('mix', function() {
        it("should contain the same amount of item as gameOfThronesNames.all", function() {
            var mixe = gameOfThronesNames.mix().split(' ');
            console.log(mixedItem[0]);
            expect(gameOfThronesNames.all).to.contains(mixedItem[0]);         
        });
-    });
+    });*/
 });
