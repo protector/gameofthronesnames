@@ -1,8 +1,26 @@
 var expect = require('chai').expect;
 var gameOfThronesNames = require('./index.js');
 
+Array.prototype.concatAll= function() {
+    var results = [];
+    this.forEach(function(subArray) {
+        subArray.forEach(function(item) {
+            results.push(item);
+        })
+    });
+    return results;
+};
+
+Array.prototype.splashArray = function(){
+    var splittedNames = [];    
+    this.forEach(function(name){
+        splittedNames.push(name.split(" "));
+    });    
+    return splittedNames.concatAll();    
+}
+
 describe('game of thrones', function(){
-    it('should work!', function(){
+    it('should run!', function(){
         expect(true).to.be.true;
     });
     
@@ -25,11 +43,18 @@ describe('game of thrones', function(){
        });
     });
     
-    /*describe('mix', function() {
+    describe('mix', function() {
        it("should contain the same amount of item as gameOfThronesNames.all", function() {
-           var mixe = gameOfThronesNames.mix().split(' ');
-           console.log(mixedItem[0]);
-           expect(gameOfThronesNames.all).to.contains(mixedItem[0]);         
+           var mixlen = gameOfThronesNames.mix.splashArray().length;
+           var alllen = gameOfThronesNames.all.splashArray().length;
+           expect(mixlen==alllen).to.be.true;
        });
-    });*/
+    });
+    
+    describe('mixrandom', function() {
+        it("should return a random item from gameOfThronesNames.mix", function() {
+            var randomItem = gameOfThronesNames.mixrandom();
+            expect(gameOfThronesNames.mix).to.include(randomItem);
+        });
+    });
 });
