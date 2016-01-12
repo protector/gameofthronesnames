@@ -1,14 +1,15 @@
 {
   "name": "got-names",
-  "version": "1.5.2",
+  "version": "0.0.0-semantically-released",
   "description": "Game of Thrones random Names",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w"
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/protector/gameofthronesnames.git"
+    "url": "https://github.com/protector/gameofthronesnames.git"
   },
   "keywords": [
     "game",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "chai": "3.4.1",
-    "mocha": "2.3.4"
+    "mocha": "2.3.4",
+    "semantic-release": "^4.3.5"
   }
 }
