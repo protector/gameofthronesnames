@@ -136,7 +136,8 @@ var mixRandomName = function(names){
 
 
 module.exports = {
-    all: gameOfThronesNames,
+    //all: gameOfThronesNames,
+    all: uniqueRandomArray(gameOfThronesNames),
     mix: mixRandomName(gameOfThronesNames),
     random: uniqueRandomArray(gameOfThronesNames),
     mixrandom: uniqueRandomArray(mixRandomName(gameOfThronesNames))    
