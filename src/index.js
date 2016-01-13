@@ -1,5 +1,6 @@
 var uniqueRandomArray = require("unique-random-array");//needs to be installed by npm install --save unique-random-array //this can be found on npmjs.org //with --save it puts the dependencie into package.json
 var gameOfThronesNames = require("../gameofthrones-names.json");
+var getRandomItem = uniqueRandomArray(gameOfThronesNames);
 
 Array.prototype.concatAll= function() {
     var results = [];
@@ -134,11 +135,23 @@ var mixRandomName = function(names){
     return createRandomName(splashArray(names));
 }
 
+function random(number) {
+    if( number === undefined) {
+        return getRandomItem();
+    } else {
+        var randomItems = [];
+        for (var i=0; i<number;i++) {
+            randomItems.push(getRandomItem());
+        }
+        return randomItems;
+    }
+}
+
 
 module.exports = {
     all: gameOfThronesNames,
     mix: mixRandomName(gameOfThronesNames),
     //random: uniqueRandomArray(gameOfThronesNames),
-    random: uniqueRandomArray(mixRandomName(gameOfThronesNames)),
+    random: random,
     mixrandom: uniqueRandomArray(mixRandomName(gameOfThronesNames))    
 };
