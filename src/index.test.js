@@ -59,10 +59,10 @@ describe('game of thrones', function(){
        });
     });
     
-    describe('mixrandom', function() {
+    /*describe('mixrandom', function() {
         it("should return a random item from gameOfThronesNames.mix", function() {
             var randomItem = gameOfThronesNames.mixrandom();
             expect(gameOfThronesNames.mix).to.include(randomItem);
         });
-    });
+    });*/
 });
