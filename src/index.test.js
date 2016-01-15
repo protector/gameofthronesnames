@@ -1,5 +1,9 @@
-var expect = require('chai').expect;
-var gameOfThronesNames = require('./index.js');
+/*ES5*/
+//var expect = require('chai').expect;
+//var gameOfThronesNames = require('./index');
+/*ES6*/
+import {expect} from 'chai';
+import gameOfThronesNames from './index';
 
 Array.prototype.concatAll= function() {
     var results = [];

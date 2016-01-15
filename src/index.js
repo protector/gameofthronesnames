@@ -1,5 +1,7 @@
-var uniqueRandomArray = require("unique-random-array");//needs to be installed by npm install --save unique-random-array //this can be found on npmjs.org //with --save it puts the dependencie into package.json
-var gameOfThronesNames = require("../gameofthrones-names.json");
+import uniqueRandomArray from "unique-random-array"; //needs to be installed by npm install --save unique-random-array //this can be found on npmjs.org //with --save it puts the dependencie into package.json
+import gameOfThronesNames from "./gameofthrones-names.json";
+/*This is an ES6 syntax for require, the babel can generate an ES5 syntax from this*/
+
 var getRandomItem = uniqueRandomArray(gameOfThronesNames);
 
 Array.prototype.concatAll= function() {
