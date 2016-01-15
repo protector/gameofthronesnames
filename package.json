@@ -10,8 +10,8 @@
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 30 --branches 30 --functions 100 --lines 30",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "test": "mocha src/index.test.js -w --compilers js:babel-register",
-    "test:single": "istanbul cover -x *.test.js node_modules/mocha/bin/_mocha -- -R spec src/index.test.js --compilers js:babel-register",
+    "test": "mocha src/index.test.js -w --compilers js:babel/register",
+    "test:single": "istanbul cover -x *.test.js node_modules/mocha/bin/_mocha -- -R spec src/index.test.js --compilers js:babel/register",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
